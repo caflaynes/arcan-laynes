@@ -1,0 +1,57 @@
+@font-face {
+   font-family: "Inter";
+   font-style: normal;
+   font-weight: 100 900;
+   font-display: swap;
+   src: url(./../assets/fonts/Inter-VariableFont_opsz\wght.woff2)
+      format("woff2-variations");
+}
+
+@font-face {
+   font-family: "Inter";
+   font-style: italic;
+   font-weight: 100 900;
+   font-display: swap;
+   src: url(./../assets/fonts/Inter-Italic-VariableFont_opsz\wght.woff2)
+      format("woff2-variations");
+}
+
+@font-face {
+   font-family: "Terminal Grotesque";
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: url(./../assets/fonts/TerminalGrotesque.woff2) format("woff2");
+}
+
+@font-face {
+   font-family: "Terminal Grotesque Open";
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: url(./../assets/fonts/TerminalGrotesqueOpen.woff2) format("woff2");
+}
+
+@font-face {
+   font-family: "Doralice Regular";
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;  
+   src: url(./../assets/fonts/doralice-regular.otf) format("otf");
+}
+
+@font-face {
+   font-family: "Molten Display";
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: url(./../assets/fonts/Molten\ Display.otf) format("otf");
+}
+
+@font-face {
+   font-family: "Bold Block";
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: url(./../assets/fonts/Bold\ Block.ttf) format("truetype");
+}
