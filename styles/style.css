@@ -52,7 +52,7 @@ body {
          width: 80%;
 
          margin-inline: auto;
-         padding-inline: 2rem;
+         padding-inline: calc(100% - 82rem);
          margin-top: 3.25rem;
 
          background-color: var(--clr-surface); /* NAVBAR BACKGROUND */
@@ -231,7 +231,7 @@ body {
 .about-title,
 .about-description {
    outline: 1px solid #dfdcd6;
-   /* outline: none; */
+   outline: none;
 }
 
 /* Animation Classes */
