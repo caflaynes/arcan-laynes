@@ -33,17 +33,20 @@
 }
 
 @font-face {
-   font-family: "Molten Display";
+   font-family: "Kollektif";
    font-style: normal;
    font-weight: 400;
    font-display: swap;
-   src: url(./../assets/fonts/Molten\ Display.otf) format("otf");
+   src: url(./../assets/fonts/kollektif-regular.woff2) format("woff2"),
+      url(./../assets/fonts/kollektif-regular.woff) format("woff");
 }
 
 @font-face {
-   font-family: "Bold Block";
+   font-family: "Kollektif";
    font-style: normal;
-   font-weight: 400;
+   font-weight: 700;
    font-display: swap;
-   src: url(./../assets/fonts/Bold\ Block.ttf) format("truetype");
+   src: url(./../assets/fonts/kollektif-bold.woff2) format("woff2"),
+      url(./../assets/fonts/kollektif-bold.woff) format("woff");
+
 }

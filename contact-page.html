@@ -60,10 +60,21 @@
          </nav>
       </header>
       <main>
-
+         <div class="contact-section">
+            <div class="contact-container">
+               <div class="contact-title">
+                  <h1>Get in touch</h1>
+                  <hr>
+               </div>
+               <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                  <input type="hidden" name="access_key" value="477f1441-bf8e-41ba-b7ba-5a22a9a90bb3">
+                  <input type="text" name="name" id="name" placeholder="Name *" class="contact-inputs" required>
+                  <input type="email" name="email" id="email" placeholder="Email *" class="contact-inputs" required>
+                  <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
+                  <button type="submit">Submit <img src="./assets/icons/arrow-icon.svg" alt="Arrow"></button>
+               </form>
+            </div>
+        </div>
       </main>
-      <footer>
-
-      </footer>
    </body>
 </html>
