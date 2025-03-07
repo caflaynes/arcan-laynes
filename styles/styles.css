@@ -189,20 +189,159 @@ main {
 
 .projects-container {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
    gap: 1rem;
-   width: 90%;
-}
+   width: 100%;
+   height: 100%;
+   place-content: center;
+   flex-wrap: wrap;
+   padding-inline: 2rem;
+} 
 
 .project-item {
-   height: 200px;
+   height: 240px;
    background-color: var(--clr-accent);
+   cursor: pointer;
+   position: relative;
+
+   & a {
+      display: block;      /* Make the link fill the div */
+      width: 100%;
+      height: 100%;
+      position: absolute;  /* Position it over the project */
+      inset: 0;            /* Stretch to cover the div */
+      z-index: 2;          /* Ensure it's above everything */
+   }
+   
 }
 
+.project-1 {
+   background-image: url(./../assets/images/projects/Cafe\ Menuu.png);
+   background-size: cover;
+   background-position: center;
+   transition: background-image 0.3s ease-in-out;
+   position: relative;
+}
+
+
+.project-2 {
+   background-image: url(./../assets/images/projects/ORANGE\ ENG.png);
+   background-size: cover;
+   background-position: top;
+   transition: background-image 0.3s ease-in-out;
+   position: relative;
+   transition: transform 0.3s ease-in-out; 
+
+   &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('./../assets/videos/ORANGE\ ENGINEERS.gif'); /* GIF */
+      background-size: cover;
+      background-position: top;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.5s ease-in-out; /* Smooth transition */
+   }
+   
+   &:hover::after {
+      opacity: 1; /* Fade in GIF */
+    }
+}
+.project-3 {
+   background-image: url(./../assets/images/projects/pROFILE\ CARD.png);
+   background-size: cover;
+   background-position: top;
+   transition: background-image 0.3s ease-in-out;
+   position: relative;
+
+   &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('./../assets/videos/PROFILE\ CARD.gif'); /* GIF */
+      background-size: cover;
+      background-position: top;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    }
+   
+    &:hover::after {
+      opacity: 1; /* Fade in GIF */
+    }
+}
+.project-4 {
+   background-image: url(./../assets/images/projects/regis\ form.png);
+   background-size: cover;
+   background-position: top;
+   transition: background-image 0.3s ease-in-out;
+   position: relative;
+
+   &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('./../assets/videos/REG\ FORM.gif'); /* GIF */
+      background-size: cover;
+      background-position: top;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    }
+   
+    &:hover::after {
+      opacity: 1; /* Fade in GIF */
+    }
+}
+
+.project-5 {
+   background-image: url(./../assets/images/projects/CK\ RENTALS.png);
+   background-size: cover;
+   background-position: top;
+   transition: background-image 0.3s ease-in-out;
+   position: relative;
+
+   &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('./../assets/videos/CK RENTALS.gif'); /* GIF */
+      background-size: cover;
+      background-position: top;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    }
+   
+    &:hover::after {
+      opacity: 1; /* Fade in GIF */
+    }
+}
+
+.project-6 {
+   background-image: url(./../assets/images/projects/kohiibara.png);
+   background-size: cover;
+   background-position: top;
+   transition: background-image 0.3s ease-in-out;
+   position: relative;
+
+   &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('./../assets/videos/Kohiibara\(1\).gif'); /* GIF */
+      background-size: cover;
+      background-position: top;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    }
+   
+    &:hover::after {
+      opacity: 1; /* Fade in GIF */
+    }
+}
+
+
 .contact-section {
-   height: 90%;
+   height: 100%;
    width: 100%;
-   border: 1px solid var(--clr-border);
 
    display: flex;
    justify-content: center;
@@ -245,7 +384,7 @@ main {
    height: 2.8rem;
    border: none;
    outline: none;
-   border-radius: 2px;
+   border-radius: 1rem;
 
    background-color: var(--clr-text);
    color: var(--clr-background);
