@@ -154,7 +154,6 @@ main {
    flex: 1;
 
    .avatar {
-      min-width: 240px;
       border: 1.5px solid var(--clr-border);
       border-radius: 30% 100% 40% / 15% 40% 15%;
       object-fit: cover;
@@ -189,7 +188,7 @@ main {
 
 .projects-container {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
+   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
    gap: 1rem;
    width: 100%;
    height: 100%;
@@ -199,7 +198,7 @@ main {
 } 
 
 .project-item {
-   height: 240px;
+   height: 235px;
    background-color: var(--clr-accent);
    cursor: pointer;
    position: relative;
@@ -212,20 +211,46 @@ main {
       inset: 0;            /* Stretch to cover the div */
       z-index: 2;          /* Ensure it's above everything */
    }
-   
+
+   &:hover {
+      transform: scale(1.05);
+   }
 }
 
 .project-1 {
-   background-image: url(./../assets/images/projects/Cafe\ Menuu.png);
+   background-image: url(./../assets/images/projects/cafe-menu.png);
    background-size: cover;
    background-position: center;
    transition: background-image 0.3s ease-in-out;
    position: relative;
+   transition: transform 0.3s ease-in-out; 
 }
 
 
 .project-2 {
-   background-image: url(./../assets/images/projects/ORANGE\ ENG.png);
+   background-image: url(./../assets/images/projects/orange-engineers.png);
+   background-size: cover;
+   background-position: top;
+   transition: background-image 0.3s ease-in-out;
+   position: relative;
+   transition: transform 0.3s ease-in-out; 
+
+   &::after {
+      content: "";
+      position: absolute;
+      background-image: url('./../assets/videos/orange-engineers.gif'); 
+      inset: 0;
+      background-size: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out; 
+   }
+   
+   &:hover::after {
+      opacity: 1;
+    }
+}
+.project-3 {
+   background-image: url(./../assets/images/projects/profile-card-rimuru.png);
    background-size: cover;
    background-position: top;
    transition: background-image 0.3s ease-in-out;
@@ -236,82 +261,62 @@ main {
       content: "";
       position: absolute;
       inset: 0;
-      background-image: url('./../assets/videos/ORANGE\ ENGINEERS.gif'); /* GIF */
+      background-image: url('./../assets/videos/profile-card-rimuru.gif');
       background-size: cover;
       background-position: top;
-      opacity: 0; /* Hidden by default */
-      transition: opacity 0.5s ease-in-out; /* Smooth transition */
-   }
-   
-   &:hover::after {
-      opacity: 1; /* Fade in GIF */
-    }
-}
-.project-3 {
-   background-image: url(./../assets/images/projects/pROFILE\ CARD.png);
-   background-size: cover;
-   background-position: top;
-   transition: background-image 0.3s ease-in-out;
-   position: relative;
-
-   &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: url('./../assets/videos/PROFILE\ CARD.gif'); /* GIF */
-      background-size: cover;
-      background-position: top;
-      opacity: 0; /* Hidden by default */
-      transition: opacity 0.5s ease-in-out; /* Smooth transition */
+      opacity: 0; 
+      transition: opacity 0.5s ease-in-out; 
     }
    
     &:hover::after {
-      opacity: 1; /* Fade in GIF */
+      opacity: 1;
     }
 }
 .project-4 {
-   background-image: url(./../assets/images/projects/regis\ form.png);
+   background-image: url(./../assets/images/projects/registration-form-code-camp.png);
    background-size: cover;
    background-position: top;
    transition: background-image 0.3s ease-in-out;
    position: relative;
+   transition: transform 0.3s ease-in-out; 
 
    &::after {
       content: "";
       position: absolute;
       inset: 0;
-      background-image: url('./../assets/videos/REG\ FORM.gif'); /* GIF */
+      background-image: url('./../assets/videos/registration-form-code-camp.gif'); 
       background-size: cover;
       background-position: top;
-      opacity: 0; /* Hidden by default */
-      transition: opacity 0.5s ease-in-out; /* Smooth transition */
+      opacity: 0; 
+      transition: opacity 0.5s ease-in-out; 
     }
    
     &:hover::after {
-      opacity: 1; /* Fade in GIF */
+      opacity: 1; 
     }
 }
 
 .project-5 {
-   background-image: url(./../assets/images/projects/CK\ RENTALS.png);
+   background-image: url(./../assets/images/projects/click-mate-rentals.png);
    background-size: cover;
    background-position: top;
    transition: background-image 0.3s ease-in-out;
    position: relative;
+   transition: transform 0.3s ease-in-out; 
 
    &::after {
       content: "";
       position: absolute;
       inset: 0;
-      background-image: url('./../assets/videos/CK RENTALS.gif'); /* GIF */
+      background-image: url('./../assets/videos/click-mate-rentals.gif');
       background-size: cover;
       background-position: top;
-      opacity: 0; /* Hidden by default */
-      transition: opacity 0.5s ease-in-out; /* Smooth transition */
+      opacity: 0; 
+      transition: opacity 0.5s ease-in-out; 
     }
    
     &:hover::after {
-      opacity: 1; /* Fade in GIF */
+      opacity: 1;
     }
 }
 
@@ -321,20 +326,21 @@ main {
    background-position: top;
    transition: background-image 0.3s ease-in-out;
    position: relative;
+   transition: transform 0.3s ease-in-out;   
 
    &::after {
       content: "";
       position: absolute;
       inset: 0;
-      background-image: url('./../assets/videos/Kohiibara\(1\).gif'); /* GIF */
+      background-image: url('./../assets/videos/kohiibara.gif'); 
       background-size: cover;
       background-position: top;
-      opacity: 0; /* Hidden by default */
-      transition: opacity 0.5s ease-in-out; /* Smooth transition */
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out; 
     }
    
     &:hover::after {
-      opacity: 1; /* Fade in GIF */
+      opacity: 1; 
     }
 }
 
